@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="main-cont">
+        <div class="calc-cont">
+            <button class="color back-color"></button>
+            <button class="title back-color ">calculater</button>
+            <input type="text" class="back-color input input1" id="input"placeholder="0">
+            <!-- <input type="text " class="back-color input input2"id="output"> -->
+            <button onclick="Clear()" class="btn back-color">C</button>
+            <button onclick="display('%')" class="btn back-color">%</button>
+            <button onclick="Del()" class="btn back-color"><</button>
+            <button onclick="display('/')" class="btn back-color">/</button>
+            <button onclick="display('7')" class="btn back-color">7</button>
+            <button onclick="display('8')" class="btn back-color">8</button>
+            <button onclick="display('9')" class="btn back-color">9</button>
+            <button onclick="display('*')" class="btn back-color">*</button>
+            <button onclick="display('4')" class="btn back-color">4</button>
+            <button onclick="display('5')" class="btn back-color">5</button>
+            <button onclick="display('6')" class="btn back-color">6</button>
+            <button onclick="display('-')" class="btn back-color">-</button>
+            <button onclick="display('1')" class="btn back-color">1</button>
+            <button onclick="display('2')" class="btn back-color">2</button>
+            <button onclick="display('3')" class="btn back-color">3</button>
+            <button onclick="display('+')" class="btn back-color">+</button>
+            <button onclick="display('00')" class="btn back-color">00</button>
+            <button onclick="display('0')" class="btn back-color">0</button>
+            <button onclick="display('.')"  class="btn back-color">.</button>
+            <button onclick="Calculator()" class="btn back-color">=</button>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        let inputscr=document.getElementById("input");
+         
+     function display(num){
+        inputscr.value+=num;
+     }
+     function Calculator(){
+        try{
+            inputscr.value=eval(inputscr.value);
+        }
+        catch(err){
+            alert("Invalid");
+        }
+     }
+     function Clear(){
+        inputscr.value="";
+     }
+    function Del(){
+        inputscr.value=inputscr.value.slice(0,-1);
+
+    }
+
+    </script>
+</body>
+
+</html>
