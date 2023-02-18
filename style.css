@@ -69,8 +69,12 @@
     background-color: #ce11e5;
     margin: 8px;
     font-size: 16px;
+    text-align: center;
     border: none;
     border-radius: 20px;
     /* box-shadow: 0 0 9px rgb(6 6 6); */
 }
+.btn:hover{
+    background-color: #8d009f;
 
+}
